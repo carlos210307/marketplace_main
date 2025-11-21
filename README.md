@@ -208,3 +208,54 @@ urlpatterns = [
 </div>
 {% endblock %}
 ```
+# Funcionalidad para que el usuario agregue articulos en la aplicacion siempre y cuando tenga acceso a la aplicacion store, estos son los pasos:
+1. actualice el archivo forms.py a el final del archivo
+```python
+class NewItemForm(forms.ModelForm):
+    class Meta:
+        model = Item
+        fields = ('category', 'name', 'description', 'price', 'image',)
+
+        widgets = {
+            'category': forms.Select(attrs={
+                'class': 'form-select'
+            }),
+            'name': forms.TextInput(attrs={
+                'class': 'form-control'
+            }),
+            'description': forms.Textarea(attrs={
+                'class': 'form-control',
+                'style': 'height: 100px'
+            }),
+            'price': forms.TextInput(attrs={
+                'class': 'form-control',
+            }),
+            'price': forms.TextInput(attrs={
+                'class': 'form-control',
+            }),
+            'image': forms.FileInput(attrs={
+                'class': 'form-control',
+            }),
+        }
+```
+
+2. Actualice el archivo views.py con la siguiente linea de codigo para el decorador en la linea 2 de su codigo.
+
+```python
+from django.contrib.auth.decorators import login_required
+```
+3. En el mismo archivo views.py ponga la siguiente funcion a el final del archivo
+
+```python
+@login_required
+def add_item(request):
+    if request.method == 'POST':
+        form = NewItemForm(request.POST, request.FILES)
+
+        if form.is_valid():
+            item = form.save(commit=False)
+            item.created_by = request.user
+            item.save()
+
+            return redirect('detail', pk=item.id)
+    else:
