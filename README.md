@@ -316,7 +316,6 @@ password: la contraseña del usuario (se muestra oculta por seguridad).
 Su función principal es recibir las credenciales del usuario y enviarlas
 a la vista encargada del proceso de autenticación.
 
-
 **SignupForm**
 
 Formulario utilizado para registrar nuevos usuarios.\
@@ -343,7 +342,7 @@ Contiene campos tales como: Nombre del artículo ,Descripción ,Precio
 Automáticamente toma la estructura del modelo Item, reduciendo la
 cantidad de código necesario y garantizando consistencia entre la base
 de datos y la interfaz de usuario.
-
+![form](media/item_images/imagen4.png)
 **Views.py (login(), logout_user(), detail(), add_item())**
 
 Las vistas controlan la lógica que ocurre cuando un usuario accede a una
@@ -394,7 +393,7 @@ de artículos.
 
 Esta vista está protegida con \@login_required para evitar que personas
 no autenticadas publiquen productos.
-
+![views](media/item_images/imagen5.png)
 **Explicar decorador \@login_required**
 
 Es un decorador que se coloca encima de una vista para indicar que esa
@@ -448,7 +447,7 @@ Llama a la vista: add_item()
 
 Estas rutas permiten navegar entre las partes principales de la
 aplicación store.
-
+![urls](media/item_images/imagen6.png)
 **store/templates (item.html, login.html, signup.html,**
 
 **navigation.html, form.html)**
@@ -467,21 +466,20 @@ Incluye:
 Imagen, Nombre del artículo, Precio, Descripción, Información del
 usuario que creó la publicación\
 Es renderizada por la vista detail().
-
+![item](media/item_images/imagen7.png)
 **login.html**
 
 Pantalla donde el usuario ingresa sus credenciales.\
 Incluye el formulario LoginForm y un botón para enviar la información.
 
 Se renderiza con la vista login_user().
-
+![login](media/item_images/imagen8.png)
 **signup.html**
 
 Pantalla donde un usuario puede registrarse con un nuevo nombre de
 usuario y contraseña.\
 Utiliza el formulario SignupForm.
-
-
+![login](media/item_images/imagen9.png)
 **navigation.html**
 
 Es una barra de navegación que aparece en todas las páginas
@@ -494,7 +492,7 @@ Si está logueado → "Agregar artículo", "Cerrar sesión".
 Si no está logueado → "Iniciar sesión".
 
 Esta plantilla se incluye en el archivo base (layout general del sitio).
-
+![navigation](media/item_images/imagen10.png)
 **form.html**
 
 Es una plantilla reutilizable que muestra formularios en formato
@@ -503,7 +501,14 @@ Se utiliza para:
 
 Crear artículos, Iniciar sesión, Registrarse, Permite evitar repetir
 código en múltiples plantillas.
+![form1](media/item_images/imagen11.png)
+**Avance**
 
+![avance](media/item_images/imagen12.png)
+![avance](media/item_images/imagen13.png)
+![avance](media/item_images/imagen14.png)
+![avance](media/item_images/imagen15.png)
+![avance](media/item_images/imagen16.png)
 **8. Escriba sus conclusiones con sus propias palabras al menos 3
 párrafos de 5 renglones.**
 
