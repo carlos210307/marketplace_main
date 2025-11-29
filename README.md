@@ -28,8 +28,7 @@ Vazquez Martinez Claudia Michelle
 
 6.  Ejecución.................................................................................9
 
-7.  Códigos Forms.py, [Views.py](http://views.py), Explicar decorador,
-    > [Urls.py](http://urls.py), store/templates ..13
+7.  Códigos Forms.py, Views.py, Explicar decorador,Urls.py,storetemplates ..13
 
 8.  Conclusión...............................................................................21
 
