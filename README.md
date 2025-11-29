@@ -507,6 +507,10 @@ código en múltiples plantillas.
 ![avance](media/item_images/imagen14.png)
 ![avance](media/item_images/imagen15.png)
 ![avance](media/item_images/imagen16.png)
+
+
+
+
 **8. Escriba sus conclusiones con sus propias palabras al menos 3
 párrafos de 5 renglones.**
 
