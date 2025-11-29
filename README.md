@@ -1,6 +1,3 @@
-![](media/image3.png){width="1.8850021872265967in"
-height="1.889530839895013in"}
-
 **Submódulo:**
 
 **Construye aplicaciones web**
@@ -36,7 +33,7 @@ Vazquez Martinez Claudia Michelle
 7.  Códigos Forms.py, [Views.py](http://views.py), Explicar decorador,
     > [Urls.py](http://urls.py), store/templates ..13
 
-8.  Conclusión...............................................................................23
+8.  Conclusión...............................................................................21
 
 Introducción
 
@@ -46,37 +43,18 @@ de "Baterías incluídas" (Batteries included), que busca acelerar el
 desarrollo de aplicaciones complejas, seguras y estables, adhiriéndose
 al principio de "No Te Repitas" (DRY).
 
-![](media/image7.png){width="2.776042213473316in"
-height="1.551317804024497in"}
+![python](media/item_images/python.png/)
 
-La ventaja principal de Django es su capacidad de
-
-desarrollo rápido (RAD). Proporciona soluciones
-
-preconstruidas y robustas para tareas que de otra
-
-manera consumirían mucho tiempo. Esto incluye
-
-ORM (Mapeo Objeto-Relacional) que permite a los
-
-desarrolladores interactuar con bases de datos
-
-usando codificación a base de python en vez de
-
-SQL, y un panel de administración que se genera
-
-automáticamente, facilitando la gestión de contenido sin la necesidad de
-programar un backend desde cero. Además, maneja de forma integrada
-sistemas esenciales como la autenticación de usuarios, sesiones y
-cacheos.
+La ventaja principal de Django es su capacidad de desarrollo rápido (RAD). Proporciona
+soluciones preconstruidas y robustas para tareas que de otra manera consumirían mucho tiempo. Esto incluye ORM (Mapeo Objeto-Relacional) que permite a los desarrolladores interactuar con bases de datos usando codificación a base de python en vez de SQL, y un panel de administración que se genera automáticamente, facilitando la gestión de contenido sin la necesidad de programar un backend desde cero. Además, maneja de forma integrada
+sistemas esenciales como la autenticación de usuarios, sesiones y cacheos.
 
 Otra razón para elegir Django es su seguridad intrínseca. El framework
 está diseñado específicamente para mitigar automáticamente amenazas web
 críticas, como la inyección SQL, el Cross-Site scripting (XSS) y la
 Falsificación de Solicitudes en Sitios Cruzados (CSRF), lo que lo
 convierte en una opción viable para proyectos
-empresariales.![](media/image14.png){width="1.890625546806649in"
-height="1.8686406386701662in"}
+empresariales.![imagen 2](media/item_images/imagen2.png)
 
 > Finalmente su escalabilidad y su ecosistema son grandes atractivos. Al
 > estar basado en Python, un lenguaje versátil y maduro, Django es capaz
@@ -161,8 +139,7 @@ django-admin startproject marketplace_main.**
 **4. Elabore un diagrama y una explicación con sus propias palabras de
 la arquitectura MVT que utiliza Django**
 
-![](media/image1.jpg){width="6.267716535433071in"
-height="3.5277777777777777in"}
+![diagrama](media/item_images/imagen3.png)
 
 La arquitectura MVT (Model-View-Template) es la forma en que Django
 organiza una aplicación web. El Model maneja los datos y la base de
@@ -216,61 +193,36 @@ respuestas entre
 
 el navegador y el servidor.
 
-DEBUG y ALLOWED_HOSTS: controlan el modo de desarrollo y los dominios
-
-permitidos para ejecutar el sitio web.
+DEBUG y ALLOWED_HOSTS: controlan el modo de desarrollo y los dominios permitidos para ejecutar el sitio web.
 
 urls.py
 
 El archivo urls.py tiene la función principal de controlar las rutas o
-direcciones (URLs) que
-
-utiliza un proyecto de Django para acceder a las diferentes páginas o
-vistas del sitio web.
+direcciones (URLs) que utiliza un proyecto de Django para acceder a las diferentes páginas o vistas del sitio web.
 
 Cuando un usuario escribe una dirección en el navegador, Django utiliza
-este archivo para
-
-determinar qué parte del código debe ejecutarse y qué contenido mostrar.
-En otras
-
-palabras, el urls.py actúa como un mapa de navegación que conecta las
-direcciones web
-
-con las funciones o vistas que deben responder a esas peticiones.
+este archivo para determinar qué parte del código debe ejecutarse y qué contenido mostrar.
+En otras palabras, el urls.py actúa como un mapa de navegación que conecta las
+direcciones web con las funciones o vistas que deben responder a esas peticiones.
 
 Dentro del archivo se definen patrones de URL mediante una lista llamada
-urlpatterns,
-
-donde se asocian rutas con vistas.
+urlpatterns, donde se asocian rutas con vistas.
 
 Además, urls.py permite organizar las rutas de manera modular, ya que
-cada aplicación
-
-dentro del proyecto puede tener su propio archivo urls.py, y todas
-pueden conectarse al
-
-archivo principal del proyecto mediante la función include().
+cada aplicación dentro del proyecto puede tener su propio archivo urls.py, y todas
+pueden conectarse al archivo principal del proyecto mediante la función include().
 
 models.py
 
 El archivo models.py es donde se define toda la parte de los datos de
-una aplicación en
-
-Django.
+una aplicación en Django.
 
 Ahí es donde se crean las clases que representan las tablas de la base
-de datos, por
-
-ejemplo una tabla de productos, usuarios o pedidos.
+de datos, por ejemplo una tabla de productos, usuarios o pedidos.
 
 Cada modelo tiene sus campos, como nombre, precio, descripción o fecha,
-y Django usa
-
-esa información para crear automáticamente las tablas en la base de
-datos, sin que uno
-
-tenga que escribir código SQL.
+y Django usa esa información para crear automáticamente las tablas en la base de
+datos, sin que uno tenga que escribir código SQL.
 
 En pocas palabras, el models.py sirve para decirle a Django qué tipo de
 información va a
@@ -371,33 +323,6 @@ password: la contraseña del usuario (se muestra oculta por seguridad).
 Su función principal es recibir las credenciales del usuario y enviarlas
 a la vista encargada del proceso de autenticación.
 
-código:
-
-class LoginForm(AuthenticationForm):
-
-username = forms.CharField(widget=forms.TextInput(
-
-attrs={
-
-\'placeholder\': \'Tu usuario\',
-
-\'class\': \'form-control\'
-
-}
-
-))
-
-password = forms.CharField(widget=forms.PasswordInput(
-
-attrs={
-
-\'placeholder\': \'password\',
-
-\'class\': \'form-control\'
-
-}
-
-))
 
 **SignupForm**
 
@@ -415,64 +340,6 @@ Su objetivo es garantizar que el nuevo usuario cumpla los requisitos y
 evitar errores comunes antes de crear la cuenta en la base de datos del
 sistema.
 
-código:
-
-class SignupForm(UserCreationForm):
-
-class Meta:
-
-model = User
-
-fields = (\'username\', \'email\', \'password1\', \'password2\')
-
-username = forms.CharField(widget=forms.TextInput(
-
-attrs={
-
-\'placeholder\': \'Tu Usuario\',
-
-\'class\': \'form-control\'
-
-}
-
-))
-
-email = forms.CharField(widget=forms.EmailInput(
-
-attrs={
-
-\'placeholder\': \'Tu Email\',
-
-\'class\': \'form-control\'
-
-}
-
-))
-
-password1 = forms.CharField(widget=forms.PasswordInput(
-
-attrs={
-
-\'placeholder\': \'Password\',
-
-\'class\': \'form-control\'
-
-}
-
-))
-
-password2 = forms.CharField(widget=forms.PasswordInput(
-
-attrs={
-
-\'placeholder\': \'Repite Password\',
-
-\'class\': \'form-control\'
-
-}
-
-))
-
 **NewItemForm**
 
 Formulario basado en un modelo (ModelForm) cuyo propósito es permitir
@@ -483,59 +350,6 @@ Contiene campos tales como: Nombre del artículo ,Descripción ,Precio
 Automáticamente toma la estructura del modelo Item, reduciendo la
 cantidad de código necesario y garantizando consistencia entre la base
 de datos y la interfaz de usuario.
-
-codigo:
-
-class NewItemForm(forms.ModelForm):
-
-class Meta:
-
-model = Item
-
-fields = (\'category\', \'name\', \'description\', \'price\',
-\'image\',)
-
-widgets = {
-
-\'category\': forms.Select(attrs={
-
-\'class\': \'form-select\'
-
-}),
-
-\'name\': forms.TextInput(attrs={
-
-\'class\': \'form-control\'
-
-}),
-
-\'description\': forms.Textarea(attrs={
-
-\'class\': \'form-control\',
-
-\'style\': \'height: 100px\'
-
-}),
-
-\'price\': forms.TextInput(attrs={
-
-\'class\': \'form-control\',
-
-}),
-
-\'price\': forms.TextInput(attrs={
-
-\'class\': \'form-control\',
-
-}),
-
-\'image\': forms.FileInput(attrs={
-
-\'class\': \'form-control\',
-
-}),
-
-}
 
 **Views.py (login(), logout_user(), detail(), add_item())**
 
@@ -661,57 +475,6 @@ Imagen, Nombre del artículo, Precio, Descripción, Información del
 usuario que creó la publicación\
 Es renderizada por la vista detail().
 
-código:
-
-{% extends \'store/base.html\' %}
-
-{% block title %}{{item.name}} \| {% endblock %}
-
-{% block content %}
-
-\<div class=\"container mt-4 mb-4\"\>
-
-\<div class=\"row\"\>
-
-\<div class=\"col-4\"\>
-
-\<img src=\"{{ item.image.url }}\" alt=\"\"
-
-class=\"rounded\" width=\"100%\"\>
-
-\</div\>
-
-\<div class=\"col-8 p-4 rounded bg-light\"\>
-
-\<h1 class=\"mb-4 text-center\"\>
-
-{{ item.name }}
-
-\</h1\>
-
-\<hr\>
-
-\<h4\>\<strong\>Precio \${{ item.price }}\</strong\>\</h4\>
-
-\<h4\>\<strong\>Vendedor {{ item.created_by.username
-}}\</strong\>\</h4\>
-
-{% if item.description %}
-
-\<p\>{{ item.description }}\</p\>
-
-{% endif %}
-
-\<a href=\"\" class=\"btn btn-dark\"\>Contacta a el vendedor\</a\>
-
-\</div\>
-
-\</div\>
-
-\</div\>
-
-{% endblock %}
-
 **login.html**
 
 Pantalla donde el usuario ingresa sus credenciales.\
@@ -719,178 +482,12 @@ Incluye el formulario LoginForm y un botón para enviar la información.
 
 Se renderiza con la vista login_user().
 
-código:
-
-{% extends \'store/base.html\' %}
-
-{% block title %}Login\| {% endblock %}
-
-{% block content %}
-
-\<div class=\"row p-4 d-flex justify-content-center
-align-items-center\"\>
-
-\<div class=\"col-6 bg-light p-4\"\>
-
-\<h4 class=\"mb-6 text-center\"\>Registro\</h4\>
-
-\<hr\>
-
-\<form action=\".\" method=\"POST\"\>
-
-{% csrf_token %}
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Username:\</h6\>
-
-{{form.username}}
-
-\</div\>
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Password:\</h6\>
-
-{{form.password}}
-
-\</div\>
-
-{% if form.errors or form.non_field_errors %}
-
-\<div class=\"mb-4 p-6 bg-danger text-white rounded\"\>
-
-{% for field in form %}
-
-field.errors
-
-{% endfor %}
-
-{{ form.non_field_errors }}
-
-\</div\>
-
-{% endif %}
-
-\<div class=\"d-flex justify-content-center align-items-center\"\>
-
-\<button class=\"btn btn-primary mb-6\"\>Login\</button\>
-
-\</div\>
-
-\<div class=\"d-flex justify-content-center align-items-center\"\>
-
-\<a href=\"{% url \'register\' %}\"\>¿No tienes cuenta? registrate
-aqui!\</a\>
-
-\</div\>
-
-\</form\>
-
-\</div\>
-
-\</div\>
-
-{% endblock %}
-
 **signup.html**
 
 Pantalla donde un usuario puede registrarse con un nuevo nombre de
 usuario y contraseña.\
 Utiliza el formulario SignupForm.
 
-código:
-
-{% extends \'store/base.html\' %}
-
-{% block title %}Registro\| {% endblock %}
-
-{% block content %}
-
-\<div class=\"row p-4 d-flex justify-content-center
-align-items-center\"\>
-
-\<div class=\"col-6 bg-light p-4\"\>
-
-\<h4 class=\"mb-6 text-center\"\>Registro\</h4\>
-
-\<hr\>
-
-\<form action=\".\" method=\"POST\"\>
-
-{% csrf_token %}
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Username:\</h6\>
-
-{{form.username}}
-
-\</div\>
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Email:\</h6\>
-
-{{form.email}}
-
-\</div\>
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Password:\</h6\>
-
-{{form.password1}}
-
-\</div\>
-
-\<div class=\"form-floating mb-3\"\>
-
-\<h6\>Repite Password:\</h6\>
-
-{{form.password2}}
-
-\</div\>
-
-{% if form.errors or form.non_field_errors %}
-
-\<div class=\"mb-4 p-6 bg-danger rounded\"\>
-
-{% for field in form %}
-
-\<h5 class=\"text-white\"\>
-
-{{field.errors}}
-
-\</h5\>
-
-{% endfor %}
-
-{{ form.non_field_errors }}
-
-\</div\>
-
-{% endif %}
-
-\<div class=\"d-flex justify-content-center align-items-center\"\>
-
-\<button class=\"btn btn-primary mb-6\"\>Register\</button\>
-
-\</div\>
-
-\<div class=\"d-flex justify-content-center align-items-center\"\>
-
-\<a href=\"{% url \'login\' %}\"\>¿Ya tienes cuenta? Accesa aqui!\</a\>
-
-\</div\>
-
-\</form\>
-
-\</div\>
-
-\</div\>
-
-{% endblock %}
 
 **navigation.html**
 
@@ -905,100 +502,6 @@ Si no está logueado → "Iniciar sesión".
 
 Esta plantilla se incluye en el archivo base (layout general del sitio).
 
-código:
-
-\<nav class=\"navbar navbar-expand-lg bg-dark\" data-bs-theme=\"dark\"\>
-
-\<div class=\"container-fluid\"\>
-
-\<a href=\"{% url \'home\' %}\"
-class=\"navbar-brand\"\>Marketplace\</a\>
-
-\<button class=\"navbar-toggler\" type=\"button\"
-data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\"
-aria-control=\"navBarNav\" aria-expanded=\"false\" aria-label=\"Toggle
-Navigation\"\>
-
-\<span class=\"navbar-toggler-icon\"\>\</span\>
-
-\</button\>
-
-\<div class=\"collapse navbar-collapse\" id=\"navbarNav\"\>
-
-\<ul class=\"navbar-nav ms-auto\"\>
-
-\<li class=\"nav-item\"\>
-
-\<a href=\"\" class=\"nav-link active\"\>
-
-Home
-
-\</a\>
-
-\</li\>
-
-\<li class=\"nav-item\"\>
-
-\<a href=\"{% url \'contact\' %}\" class=\"nav-link active\"\>
-
-Contact
-
-\</a\>
-
-\</li\>
-
-{% if request.user.is_authenticated %}
-
-\<!\-- nuevo link \--\>
-
-\<li class=\"nav-item\"\>
-
-\<a class=\"nav-link\" href=\"{% url \'add_item\'%}\"\>Add Item\</a\>
-
-\</li\>
-
-\<li class=\"nav-item\"\>
-
-\<a href=\"{% url \'logout\' %}\" class=\"nav-link active\"\>
-
-Logout
-
-\</a\>
-
-\</li\>
-
-{% else %}
-
-\<li class=\"nav-item\"\>
-
-\<a href=\"{% url \'login\' %}\" class=\"nav-link active\"\>
-
-Login
-
-\</a\>
-
-\</li\>
-
-\<li class=\"nav-item\"\>
-
-\<a href=\"{% url \'register\' %}\" class=\"nav-link active\"\>
-
-Register
-
-\</a\>
-
-\</li\>
-
-{% endif %}
-
-\</ul\>
-
-\</div\>
-
-\</div\>
-
-\</nav\>
-
 **form.html**
 
 Es una plantilla reutilizable que muestra formularios en formato
@@ -1007,50 +510,6 @@ Se utiliza para:
 
 Crear artículos, Iniciar sesión, Registrarse, Permite evitar repetir
 código en múltiples plantillas.
-
-Codigo:
-
-{% extends \'store/base.html\' %}
-
-{% block title %} {{ title }} {% endblock %}
-
-{% block content%}
-
-\<h4 class=\"mb-4 mt-4\"\>{{ title }}\</h4\>
-
-\<hr\>
-
-\<form action=\".\" method=\"POST\" enctype=\"multipart/form-data\"\>
-
-{% csrf_token %}
-
-\<div\>
-
-{{ form.as_p }}
-
-\</div\>
-
-{% if form.errors or form.non_field_errors %}
-
-\<div class=\"mb-4 p-6 bg-danger\"\>
-
-{% for field in form %}
-
-{{ field.errors }}
-
-{% endfor %}
-
-{{ form.non_field_errors }}
-
-\</div\>
-
-{% endif %}
-
-\<button class=\"btn btn-primary mb-6\"\>Register\</button\>
-
-\</form\>
-
-{% endblock%}
 
 **8. Escriba sus conclusiones con sus propias palabras al menos 3
 párrafos de 5 renglones.**
