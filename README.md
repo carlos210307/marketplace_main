@@ -450,6 +450,7 @@ Incluye:
 Imagen, Nombre del artículo, Precio, Descripción, Información del
 usuario que creó la publicación\
 Es renderizada por la vista detail().
+
 ![item](media/item_images/imagen7.png)
 
 
@@ -460,6 +461,7 @@ Pantalla donde el usuario ingresa sus credenciales.\
 Incluye el formulario LoginForm y un botón para enviar la información.
 
 Se renderiza con la vista login_user().
+
 ![login](media/item_images/imagen8.png)
 
 
@@ -468,6 +470,7 @@ Se renderiza con la vista login_user().
 
 Pantalla donde un usuario puede registrarse con un nuevo nombre de usuario y contraseña.\
 Utiliza el formulario SignupForm.
+
 ![login](media/item_images/imagen9.png)
 
 
@@ -484,6 +487,7 @@ Si está logueado → "Agregar artículo", "Cerrar sesión".
 Si no está logueado → "Iniciar sesión".
 
 Esta plantilla se incluye en el archivo base (layout general del sitio).
+
 ![navigation](media/item_images/imagen10.png)
 
 
@@ -496,6 +500,7 @@ Se utiliza para:
 
 Crear artículos, Iniciar sesión, Registrarse, Permite evitar repetir
 código en múltiples plantillas.
+
 ![form1](media/item_images/imagen11.png)
 
 
