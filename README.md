@@ -298,10 +298,7 @@ mencionados.**
 ![codigo8](media/item_images/codigo8.png)![codigo9](media/item_images/codigo9.png)![codigo10](media/item_images/codigo10.png)
 **Forms.py (LoginForm, SignupForm, NewItemForm)**
 
-En este archivo se definen los formularios que utiliza la aplicación
-para interactuar con el usuario. Estos formularios permiten capturar
-información de manera estructurada y validarla antes de enviarla a la
-base de datos o procesarla en una vista.
+En este archivo se definen los formularios que utiliza la aplicación  para interactuar con el usuario. Estos formularios permiten capturar información de manera estructurada y validarla antes de enviarla a la base de datos o procesarla en una vista.
 
 **LoginForm**
 
@@ -313,8 +310,7 @@ username: el nombre de usuario registrado.
 
 password: la contraseña del usuario (se muestra oculta por seguridad).
 
-Su función principal es recibir las credenciales del usuario y enviarlas
-a la vista encargada del proceso de autenticación.
+Su función principal es recibir las credenciales del usuario y enviarlas a la vista encargada del proceso de autenticación.
 
 **SignupForm**
 
@@ -325,56 +321,43 @@ username, email, password1 y password2
 
 Este formulario incorpora validaciones importantes, como:
 
-Verificar si el nombre de usuario ya existe, Comprobar que las dos
-contraseñas coincidan.
+Verificar si el nombre de usuario ya existe, Comprobar que las dos contraseñas coincidan.
 
-Su objetivo es garantizar que el nuevo usuario cumpla los requisitos y
-evitar errores comunes antes de crear la cuenta en la base de datos del
-sistema.
+Su objetivo es garantizar que el nuevo usuario cumpla los requisitos y evitar errores comunes antes de crear la cuenta en la base de datos del sistema.
 
 **NewItemForm**
 
-Formulario basado en un modelo (ModelForm) cuyo propósito es permitir
-que un usuario agregue un nuevo artículo al marketplace.\
-Contiene campos tales como: Nombre del artículo ,Descripción ,Precio
-,Imagen y Categoría del producto.
+Formulario basado en un modelo (ModelForm) cuyo propósito es permitir que un usuario agregue un nuevo artículo al marketplace.\ Contiene campos tales como: Nombre del artículo ,Descripción ,Precio ,Imagen y Categoría del producto.
 
-Automáticamente toma la estructura del modelo Item, reduciendo la
-cantidad de código necesario y garantizando consistencia entre la base
-de datos y la interfaz de usuario.
+Automáticamente toma la estructura del modelo Item, reduciendo la cantidad de código necesario y garantizando consistencia entre la base de datos y la interfaz de usuario.
+
 ![form](media/item_images/imagen4.png)
+
+
+
 **Views.py (login(), logout_user(), detail(), add_item())**
 
-Las vistas controlan la lógica que ocurre cuando un usuario accede a una
-ruta específica. Cada vista procesa datos, interactúa con la base de
-datos y devuelve una plantilla HTML renderizada.
+Las vistas controlan la lógica que ocurre cuando un usuario accede a una ruta específica. Cada vista procesa datos, interactúa con la base de datos y devuelve una plantilla HTML renderizada.
 
 **login() o login_user()**
 
 Esta vista recibe los datos del formulario de inicio de sesión.\
 Sus funciones principales son:
 
-Recibir las credenciales enviadas por un formulario, Autenticar al
-usuario utilizando el sistema interno de Django, Iniciar la sesión si
-los datos son correctos, Redirigir al usuario a la página principal del
-marketplace.\
-Si las credenciales son incorrectas, simplemente vuelve a mostrar el
-formulario.
+Recibir las credenciales enviadas por un formulario, Autenticar al usuario utilizando el sistema interno de Django, Iniciar la sesión si los datos son correctos, Redirigir al usuario a la página principal del marketplace.\
+Si las credenciales son incorrectas, simplemente vuelve a mostrar el formulario.
 
 **logout_user()**
 
 Esta vista cierra la sesión del usuario.\
-Acciones que realiza: Termina la sesión actual, Limpia los datos de
-sesión almacenados, Redirige al usuario a la página de inicio de sesión.
+Acciones que realiza: Termina la sesión actual, Limpia los datos de sesión almacenados,Redirige al usuario a la página de inicio de sesión.
 
 Se utiliza normalmente desde un botón en la barra de navegación.
 
 **detail()**
 
 Vista encargada de mostrar un artículo específico.\
-Sus funciones: Recibir el identificador (ID) del artículo, Buscar el
-artículo en la base de datos, Si existe, enviarlo a una plantilla para
-mostrar sus datos.\
+Sus funciones: Recibir el identificador (ID) del artículo, Buscar el artículo en la base de datos, Si existe, enviarlo a una plantilla para mostrar sus datos.\
 Si no existe, mostrar una página de error.
 
 Es la vista que muestra:
@@ -385,21 +368,18 @@ Imagen del artículo, Descripción, Precio, Usuario que lo publicó
 
 Permite a los usuarios agregar un artículo nuevo al marketplace.
 
-Funciones principales: Mostrar un formulario vacío si es la primera vez
-que se accede, Recibir los datos enviados por el usuario, Validar que
-toda la información sea correcta, Guardar el artículo en la base de
-datos, Asociar el artículo al usuario que lo creó, Redirigir al listado
-de artículos.
+Funciones principales: Mostrar un formulario vacío si es la primera vez que se accede, Recibir los datos enviados por el usuario, Validar que toda la información sea correcta, Guardar el artículo en la base de datos, Asociar el artículo al usuario que lo creó,Redirigir al listado de artículos.
 
 Esta vista está protegida con \@login_required para evitar que personas
 no autenticadas publiquen productos.
+
 ![views](media/item_images/imagen5.png)
+
+
+
 **Explicar decorador \@login_required**
 
-Es un decorador que se coloca encima de una vista para indicar que esa
-función solo puede ser utilizada por usuarios que ya hayan iniciado
-sesión.
-
+Es un decorador que se coloca encima de una vista para indicar que esa función solo puede ser utilizada por usuarios que ya hayan iniciado sesión.
 Lo que hace es:
 
 > Revisar si el usuario está autenticado.
@@ -447,7 +427,11 @@ Llama a la vista: add_item()
 
 Estas rutas permiten navegar entre las partes principales de la
 aplicación store.
+
 ![urls](media/item_images/imagen6.png)
+
+
+
 **store/templates (item.html, login.html, signup.html,**
 
 **navigation.html, form.html)**
@@ -467,6 +451,9 @@ Imagen, Nombre del artículo, Precio, Descripción, Información del
 usuario que creó la publicación\
 Es renderizada por la vista detail().
 ![item](media/item_images/imagen7.png)
+
+
+
 **login.html**
 
 Pantalla donde el usuario ingresa sus credenciales.\
@@ -474,12 +461,17 @@ Incluye el formulario LoginForm y un botón para enviar la información.
 
 Se renderiza con la vista login_user().
 ![login](media/item_images/imagen8.png)
+
+
+
 **signup.html**
 
-Pantalla donde un usuario puede registrarse con un nuevo nombre de
-usuario y contraseña.\
+Pantalla donde un usuario puede registrarse con un nuevo nombre de usuario y contraseña.\
 Utiliza el formulario SignupForm.
 ![login](media/item_images/imagen9.png)
+
+
+
 **navigation.html**
 
 Es una barra de navegación que aparece en todas las páginas
@@ -493,6 +485,9 @@ Si no está logueado → "Iniciar sesión".
 
 Esta plantilla se incluye en el archivo base (layout general del sitio).
 ![navigation](media/item_images/imagen10.png)
+
+
+
 **form.html**
 
 Es una plantilla reutilizable que muestra formularios en formato
@@ -502,6 +497,9 @@ Se utiliza para:
 Crear artículos, Iniciar sesión, Registrarse, Permite evitar repetir
 código en múltiples plantillas.
 ![form1](media/item_images/imagen11.png)
+
+
+
 **Avance**
 
 ![avance](media/item_images/imagen12.png)
