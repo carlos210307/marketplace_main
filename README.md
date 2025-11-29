@@ -272,37 +272,30 @@ mencionados.**
 
 **settings.py:**
 
-![](media/image8.png){width="3.1458333333333335in" height="2.25in"}
+![codigo1](media/item_images/codigo1.png)
 
 **urls.py:**
 
-![](media/image5.png){width="3.4166666666666665in" height="2.09375in"}
+![codigo2](media/item_images/codigo2.png)
 
 **models.py:**
 
-![](media/image12.png){width="5.260416666666667in"
-height="2.2708333333333335in"}
+![codigo3](media/item_images/codigo3.png)
 
 **views.py:**
 
-![](media/image2.png){width="6.072916666666667in"
-height="1.6041666666666667in"}
+![codigo4](media/item_images/codigo4.png)
 
 **templates/store/index.html:**\
-![](media/image10.png){width="5.46875in" height="3.7395833333333335in"}
+![codigo5](media/item_images/codigo5.png)
 
 **7. Agregue la ejecución de lo que va del proyecto**
 
-![](media/image9.png){width="6.267716535433071in"
-height="4.444444444444445in"}
+![codigo6](media/item_images/codigo6.png)
 
-![](media/image11.png){width="6.267716535433071in" height="5.25in"}
+![codigo7](media/item_images/codigo7.png)
 
-![](media/image13.png){width="6.267716535433071in"
-height="4.694444444444445in"}![](media/image6.png){width="6.267716535433071in"
-height="2.9722222222222223in"}![](media/image4.png){width="6.267716535433071in"
-height="3.0in"}
-
+![codigo8](media/item_images/codigo8.png)![codigo9](media/item_images/codigo9.png)![codigo10](media/item_images/codigo10.png)
 **Forms.py (LoginForm, SignupForm, NewItemForm)**
 
 En este archivo se definen los formularios que utiliza la aplicación
