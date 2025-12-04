@@ -49,7 +49,7 @@ Vazquez Martinez Claudia Michelle
 8.  [Conclusión](#Conclusión)...............................................................................21
 
 
-#Introducción
+##Introducción
 
 
 Django es un framework de desarrollo web de alto nivel, gratuito y de
@@ -85,7 +85,7 @@ empresariales.![imagen 2](media/item_images/imagen2.png)
 > extensa.
 
 
-#Comandos
+##Comandos
 
 
 **2. Explicación con sus propias palabras de cada comando que vimos en
@@ -177,7 +177,7 @@ django-admin startproject marketplace_main.**
     > datos.
 
 
-**3 #MVT
+##MVT
 
 
 ![diagrama](media/item_images/imagen3.png)
@@ -195,7 +195,7 @@ template y finalmente se genera una página HTML que se devuelve al
 usuario.
 
 
-**4. #Comandos_py
+##Comandos_py
 
 
 settigs.py
@@ -351,7 +351,7 @@ como el módulo de presentación (la \"P\" de MTV - Modelo, Plantilla,
 Vista) donde reside todo el diseño web y la estructura visual.
 
 
-**5. #Código
+##Código
 
 **settings.py:**
 
@@ -658,7 +658,7 @@ def add_item(request):
 </html>
 
 
-**6. #Ejecución
+##Ejecución
 
 
 ![codigo6](media/item_images/codigo6.png)
@@ -1351,7 +1351,7 @@ código en múltiples plantillas.
 
 
 
-**8. #Conclusión
+##Conclusión
 
 
 **Conclusión:**
